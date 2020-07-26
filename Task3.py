@@ -1,16 +1,23 @@
+#!/usr/bin/env python3
+
 """
 Read file into texts and calls.
 It's ok if you don't understand how to read files.
 """
+
 import csv
 
-with open('texts.csv', 'r') as f:
-    reader = csv.reader(f)
-    texts = list(reader)
+def getCSVData():
+    texts = []
+    calls = []
+    with open('texts.csv', 'r') as f:
+        reader = csv.reader(f)
+        texts = list(reader)
 
-with open('calls.csv', 'r') as f:
-    reader = csv.reader(f)
-    calls = list(reader)
+    with open('calls.csv', 'r') as f:
+        reader = csv.reader(f)
+        calls = list(reader)
+    return (texts, calls)
 
 """
 TASK 3:
@@ -43,3 +50,7 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+if __name__ == '__main__':
+    texts, calls = getCSVData()
+    print("capi")
