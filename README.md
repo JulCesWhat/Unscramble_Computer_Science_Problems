@@ -2,49 +2,98 @@
 
 ## Time Complexity (inclusing reading csv files)
 
-### Task O: O(2n) => O(n)
+### Task O:
 
-The time complexity for this task is O(2n) because we are iterating over all the rows in the calls and text files while reading it. Since 2 does not matter when n is large, we can remove it.
+* Worse case complexity: O(n)
+* Algorithm:
+    * Reading all calls from csv: O(n)
+    * reading all texts from csv: O(n)
+    * Getting first element of text: O(1)
+    * Getting last element of calls: O(1)
+    * Printing first text: O(1)
+    * Printing last call: O(1)
 
-### Task 1: O(4n) => O(n)
+### Task 1:
 
-The time complexity for this task is O(4n) because we are iterating over all the rows in the calls and text files while reading it and then iterating over all the text and call rows that we have read. Since 4 does not matter when n is large, we can remove it.
+* Worse case complexity: O(n)
+* Algorithm:
+    * Creating telephone dictionary: O(1)
+    * Reading all calls from csv: O(n)
+    * reading all texts from csv: O(n)
+    * First check: O(1)
+    * Update dictionary: O(1)
+    * Second check: O(1)
+    * Update dictionary: O(1)
+    * Iterating over all texts: O(n)
+    * Iterating over all calls: O(n)
+    * First check: O(1)
+    * Update dictionary: O(1)
+    * Second check: O(1)
+    * Update dictionary: O(1)
+    * Printing message: O(1)
 
-### Task 2: O(3n) => O(n)
+### Task 2:
 
-The time complexity for this task is O(3n) because we are iterating over all the rows in the calls and text files while reading it and then iterating over all the calls that we have read. Since 3 does not matter when n is large, we can remove it.
+* Worse case complexity: O(n)
+* Algorithm:
+    * Reading all calls from csv: O(n)
+    * reading all texts from csv: O(n)
+    * Creating durationCall: O(1)
+    * Creating phoneNumber: O(1)
+    * Iterating over all calls: O(n)
+    * Creating duration: O(1)
+    * Doing check: O(1)
+    * Setting new durationCall value: O(1)
+    * Setting new phoneNumber value: O(1)
+    * Printing message: O(1)
 
-### Task 3: O(4n) => O(n)
+### Task 3:
 
-The time complexity for this task is O(4n) because we are iterating over all the rows in the calls and text files while reading it. We are then iterating over all the calls and then over all the phone numbers that have been called by the bangalore number. Since 4 does not matter when n is large, we can remove it.
+* Worse case complexity: O(n + 𝑛log𝑛)
+* Algorithm:
+    * Reading all calls from csv: O(n)
+    * reading all texts from csv: O(n)
+    * Creating total_calls: O(1)
+    * Creating called_phones: O(1)
+    * Iterating over calls: O(1)
+    * Checking for (080) or 140: O(1)
+    * Spletting string: O(n)
+    * Lenght check: O(1)
+    * Creating code: O(1)
+    * Updatting total_calls: O(1)
+    * Check for called_phones: O(1)
+    * Update called_phones: O(1)
+    * Sorting call_phones: 𝑂(𝑛log𝑛)
+    * Iterating over all_lines: O(n)
+    * printing line: O(1)
+    * Creating percentage_lines: O(1)
+    * Checking called_phones: O(1)
+    * Setting new percentage_lines: O(1)
+    * Printing message: O(1)
 
-### Task 4: O(6n) => O(n)
+### Task 4:
 
-The time complexity for this task is O(6n) because we are iterating over all the rows in the calls and text files while reading it. We are then iterating over all the calls and then over all the texts and then over all the calls again and then over all the remaning sent calls while printing the result. Since 6 does not matter when n is large, we can remove it.
+* Worse case complexity: O(n + 𝑛log𝑛)
+* Algorithm:
+    * Reading all calls from csv: O(n)
+    * reading all texts from csv: O(n)
+    * Creating send_calls: O(1)
+    * Iterating over calls: O(n)
+    * Checking send_calls: O(1)
+    * Updating send_calls: O(1)
+    * Iterating over texts: O(n)
+    * Checking send_calls: O(1)
+    * Deleting send_calls value: O(1)
+    * Checing send_calls: O(1)
+    * Deleting send_calls value: O(1)
+    * Iterating over calls: O(n)
+    * Checing send_calls: O(1)
+    * Deleting send_calls value: O(1)
+    * Printing message: O(1)
+    * Sorting: 𝑂(𝑛log𝑛)
+    * Iterating over all_send_calls: O(n) 
+    * Printing message: O(1)
 
-
-
-## Time Complexity (not inclusing reading csv files)
-
-### Task O: O(1) => O(1)
-
-The time complexity for this task is constant since we are not iterating over anything and just retriving values at a certain place.
-
-### Task 1: O(2n) => O(n)
-
-The time complexity for this task is 0(2n) becuase we are iterating over all the calls and texts that we read. Since 2 does not matter when n is large, we can remove it.
-
-### Task 2: O(1n) => O(n)
-
-The time complexity for this task is 0(1n) becuase we are iterating over all the calls. Since 1 does not matter when n is large, we can remove it.
-
-### Task 3: O(2n) => O(n)
-
-The time complexity for this task is 0(2n) becuase we are iterating over all the calls and then over all the phones that have been called. Since 2 does not matter when n is large, we can remove it.
-
-### Task 4: O(4n) => O(n)
-
-The time complexity for this task is 0(4n) becuase we are iterating over all the calls and then text and then calls again and then over all the remaning phone number that have given a call. Since 4 does not matter when n is large, we can remove it.
 
 
 ## Required Tools
